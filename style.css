@@ -261,7 +261,7 @@ body {
     box-sizing: border-box;
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
     color: #e0e0e0;
-    overflow: clip;
+    overflow: visible;
 }
 
 /* Update the body::before background pattern */
@@ -310,7 +310,16 @@ body {
     background-color: #f8f8f8;
     color: #333;
     line-height: 1.6;
-    overflow: clip;
+    overflow: visible;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 header {
