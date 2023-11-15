@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <title>Jesse Aspiola - Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+            overflow: hidden;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        header {
+            text-align: center;
+            color: #fff;
+            padding: 20px 0;
+            background-color: #007bff;
+            animation: pulseBackground 3s infinite alternate;
+        }
+
+        @keyframes pulseBackground {
+            from {
+                background-color: #007bff;
+            }
+            to {
+                background-color: #201eb1;
+            }
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        /* Add other styles for the rest of your content */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jesse Aspiola</h1>
+        <p>Web Developer</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="services.html">Services</a></li>
+            
+        </ul>
+    </nav>
+    
+    <section class="hero">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Explore my projects and skills</p>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out! You can contact me via Email.</p>
+        <ul class="contact-list">
+            <li>Email: jesse.a.aspiola@gmail.com</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Jesse Aspiola</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        // Example animation using Anime.js
+        anime({
+            targets: 'header h1',
+            translateX: [-100, 0],
+            opacity: [0, 1],
+            easing: 'easeInOutQuad',
+            duration: 1000,
+            delay: 500
+        });
+    
+        anime({
+            targets: 'nav ul li',
+            translateY: [-20, 0],
+            opacity: [0, 1],
+            easing: 'easeInOutQuad',
+            duration: 1000,
+            delay: anime.stagger(100, { start: 1000 })
+        });
+    
+        anime({
+            targets: '.hero',
+            translateY: [50, 0],
+            opacity: [0, 1],
+            easing: 'easeInOutQuad',
+            duration: 1000,
+            delay: 1500
+        });
+    </script>
+</body>
+</html>
